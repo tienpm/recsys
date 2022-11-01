@@ -1,0 +1,15 @@
+name: rec_env
+channels:
+  - conda-forge
+  - defaults
+  - nvidia
+# - javascripts
+dependencies:
+  - python>=3.8.6
+  - codecov
+  - pip
+  - boto3>=1.15.0
+  - google-cloud-sdk
+# variables:
+
+# prefix: /conda/envs/rec-env
