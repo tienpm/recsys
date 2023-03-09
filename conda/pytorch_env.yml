@@ -10,6 +10,7 @@ dependencies:
   - pytorch=1.13.1
   - cudatoolkit=11.6
   - cudnn=8.1.0
+  - pytorch-cuda=11.6
   - codecov
   - pip
   - boto3>=1.15.0

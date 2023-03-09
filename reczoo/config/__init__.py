@@ -1,0 +1,1 @@
+from reczoo.config.configurator import Config
