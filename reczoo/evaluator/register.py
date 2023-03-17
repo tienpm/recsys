@@ -23,7 +23,7 @@ def cluster_info(module_name):
         ``RANKING`` and ``VALUE``.
 
     Args:
-        module_name (str): the name of module ``recbole.evaluator.metrics``.
+        module_name (str): the name of module ``reczoo.evaluator.metrics``.
 
     Returns:
         dict: Three dictionaries containing the above information
@@ -51,7 +51,7 @@ def cluster_info(module_name):
     return smaller_m, m_info, m_types, m_dict
 
 
-metric_module_name = "recbole.evaluator.metrics"
+metric_module_name = "reczoo.evaluator.metrics"
 smaller_metrics, metric_information, metric_types, metrics_dict = cluster_info(
     metric_module_name
 )

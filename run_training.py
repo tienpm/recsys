@@ -2,6 +2,7 @@
 
 import argparse
 import logging
+import sys
 from logging import getLogger
 
 from reczoo.config import Config
@@ -13,7 +14,7 @@ from reczoo.data import (
     load_split_dataloaders,
 )
 from reczoo.data.transform import construct_transform
-from recbole.utils import (
+from reczoo.utils import (
     init_logger,
     get_model,
     get_trainer,
@@ -24,14 +25,14 @@ from recbole.utils import (
 )
 
 
-def run_training(
+def training_pipeline(
     model=None, dataset=None, config_file_list=None, config_dict=None, saved=True
 ):
     """
         A function which trigger the complete process of training and testing a model on specified dataset
     Args:
         model (str, optional): Model name. Defaults to ``None``.
-        dataser (str, optional): Dataset name. Defaults to ``None``.
+        dataset (str, optional): Dataset name. Defaults to ``None``.
         config_file_list (list, optional): Config files used to modify experiment parameters. Defaults to ``None``.
         config_dict (dict, optional): Parameters dictionary used to modify experiment parameters. Defaults to ``None``.
         saved: (bool, optional): Whether to save the model. Defaults to ``True``.
@@ -123,5 +124,9 @@ if __name__ == "__main__":
     )
 
     args, _ = parser.parse_known_args()
+
+
+
+
 
 

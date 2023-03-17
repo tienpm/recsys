@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-r"""
-reczoo.utils.enum_type
-###########################
 """
+reczoo.utils.enum_type
+#######################
+"""
+
 from enum import Enum
 
 

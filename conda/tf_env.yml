@@ -6,14 +6,15 @@ channels:
 # - javascripts
 dependencies:
   - python=3.9.16
-  - tensorflow=2.11.0
-  - cudatoolkit=11.2.2
-  - cudnn=8.1.0
+  - conda-forge::cudatoolkit=11.2.2
+  - conda-forge::cudnn=8.1.0
   - codecov
   - pip
   - boto3>=1.15.0
   - google-cloud-sdk
   - jupyterlab
+  - conda-forge::widgetsnbextension
+  - conda-forge::ipywidgets
 # variables:
 
 # prefix: /conda/envs/rec-env

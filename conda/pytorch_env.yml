@@ -7,15 +7,13 @@ channels:
 # - javascripts
 dependencies:
   - python=3.8.14
-  - pytorch=1.13.1
-  - cudatoolkit=11.6
-  - cudnn=8.1.0
-  - pytorch-cuda=11.6
   - codecov
   - pip
   - boto3>=1.15.0
   - google-cloud-sdk
   - jupyterlab
+  - conda-forge::widgetsnbextension
+  - conda-forge::ipywidgets
 # variables:
 
 # prefix: /conda/envs/rec-env

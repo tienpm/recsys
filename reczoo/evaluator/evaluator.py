@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 r"""
-recbole.evaluator.evaluator
+reczoo.evaluator.evaluator
 #####################################
 """
 

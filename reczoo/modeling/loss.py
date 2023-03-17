@@ -9,7 +9,7 @@
 
 
 r"""
-recbole.model.loss
+reczoo.model.loss
 #######################
 Common Loss in recommender system
 """
