@@ -1,7 +1,6 @@
 # Recommendation Training
 
 
-
 ## Description
 
 This is repository containing the Deep Learning models zoo trainer for various category recommendation problems such that:
@@ -10,72 +9,53 @@ This is repository containing the Deep Learning models zoo trainer for various c
 * content-based recommendation
 * session-based recommendation (sequential recommender)
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use [Shields](https://shields.io/) to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
 ## Installation
-#### For using `pytorch` framework
-* **Step 1:** Create virtual enviroment
-
-```
+#### For using `pytorch` framework. We create virtual environment which contains 'pytorch' framework
+```commandline
 cd ./<folder_of_recommend_repository>
-conda env create -f ./conda/base_env.yml -n kvc_rec_train
+conda env create -n <name of environment> -f <the conda environment path>
+conda activate <name fo environment>
+#conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia -y
+conda install pytorch pytorch-cuda=11.6 -c conda -c nvidia
+# Add a new kernel that have contain execute file from this enviroment
+python -m ipykernel install --user --name=<name of environment>
+# Trigger Jupyter Lab Server
+jupyter lab --ip=0.0.0.0 --port=8888 --no-browser &!
 ```
-*  **Step 2:** Install requirement packages
-
-```
-conda activate kvc_rec_train \
-conda install -f ./venv/pytorch_requirements.txt
-```
-**or**
-```
-conda activate kvc_rec_train \
-pip install -r ./venv/pytorch_requirements.txt
-```
-
-#### For using `tensorflow` framework
-* **Step 1:** Create virtual enviroment
-
-```
+Example:
+```commandline
 cd ./<folder_of_recommend_repository>
-conda env create -f ./conda/base_env.yml -n kvc_rec_train_tf
-```
-*  **Step 2:** Install requirement packages
-
-```
-conda activate kvc_rec_train_tf
-conda install -f ./venv/tf_requirements.txt
-```
-**or**
-```
-conda activate kvc_rec_train_tf \
-pip install -r ./venv/tf_requirements.txt
+conda env create -n pytorch_env -f ./venv/pytorch_env.yml
+conda activate pytorch_env
+#conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia -y
+conda install pytorch pytorch-cuda=11.6 -c conda -c nvidia
+# Add a new kernel that have contain execute file from this enviroment
+python -m ipykernel install --user --name=pytorch_env
+# Trigger Jupyter Lab Server
+jupyter lab --ip=0.0.0.0 --port=8888 --no-browser &!
 ```
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+To training and watching experiment log for the recommendation methods
+Run: 
+```commandline
+python run_training.py --model=NARM --dataset=yoochoose --config_files=<path to config file>
+```
 
 ## Support
-KVC AI team - KiotViet Corporation
+KVC AI team - KiotViet Technology Corporation 
 
 ## Roadmap
 None
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+Just following the Installation instruction and reading the project struct  
 
 ## Authors and acknowledgment
-KVC AI team - KiotViet Corporation
+KVC AI team - KiotViet Technology Corporation
+
+## Reference
+Inspired by **RecBole** 
 
 ## License
 None

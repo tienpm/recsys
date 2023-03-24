@@ -25,7 +25,7 @@ from reczoo.utils import (
 )
 
 
-def training_pipeline(
+def run_training_pipeline(
     model=None, dataset=None, config_file_list=None, config_dict=None, saved=True
 ):
     """
@@ -124,6 +124,15 @@ if __name__ == "__main__":
     )
 
     args, _ = parser.parse_known_args()
+
+    config_file_list = (
+        args.config_files.strip().split(" ") if args.config_files else None
+    )
+
+    if args.nproc == 1 and args.world_size <= 0:
+        run_training_pipeline(
+            model=args.model, dataset=args.dataset, config_file_list=config_file_list
+        )
 
 
 

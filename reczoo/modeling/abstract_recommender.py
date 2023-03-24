@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 r"""
-recbole.model.abstract_recommender
+reczoo.model.abstract_recommender
 ##################################
 """
 

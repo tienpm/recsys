@@ -99,7 +99,7 @@ class Trainer(AbstractTrainer):
 
         self.logger = getLogger()
         self.tensorboard = get_tensorboard(self.logger)
-        self.wandblogger = WandbLogger(config)
+        # self.wandblogger = WandbLogger(config)
         self.learner = config["learner"]
         self.learning_rate = config["learning_rate"]
         self.epochs = config["epochs"]

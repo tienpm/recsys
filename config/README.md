@@ -1,0 +1,1 @@
+**This is folder contain preconfigurations for the trainning process**

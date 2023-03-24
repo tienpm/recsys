@@ -1,8 +1,11 @@
-aws/
-venv/
+aws/**
+venv/**
 !venv/flax_requirements.txt
 !venv/pytorch_requirements.txt
 !venv/tf_requirements.txt
 !venv/create_pytorch_env.sh
 !venv/create_tensorflow_env.sh
-.idea/
+config/**
+!config/README.md
+!config/train-example.yaml
+.idea/**
